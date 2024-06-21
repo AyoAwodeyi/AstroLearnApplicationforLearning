@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const signUp = require("./routes/signUp");
+const signin = require("./routes/signin");
 const cors = require("cors");
 
 const app = express();
@@ -23,6 +24,8 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/signUp", signUp);
+app.use("/api/signin", signin);
+
 
 app.get("/", (req, res) => {
   res.send("Welcome to our API");
