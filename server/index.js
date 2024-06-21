@@ -1,17 +1,28 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+const signUp = require("./routes/signUp");
+const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 3001; // Use a different port if 3000 is in use
+const PORT = process.env.PORT || 3001;
 const connect_string = process.env.CONNECTION_STRING;
 
 // Debugging line to check if the connection string is loaded
 console.log("Connection String from .env:", connect_string);
 
+if (!connect_string) {
+  console.error(
+    "No connection string found. Please set CONNECTION_STRING in your .env file."
+  );
+  process.exit(1);
+}
 
 // Middleware
 app.use(express.json());
+app.use(cors());
+
+app.use("/api/signUp", signUp);
 
 app.get("/", (req, res) => {
   res.send("Welcome to our API");
