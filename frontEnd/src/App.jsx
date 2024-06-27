@@ -17,16 +17,17 @@ function App() {
             </input>
             <i class='bx bx-envelope'></i>
           </div>
+
           <div class = "input-box">
             <input type ="password" placeholder = "Password" required>
             </input>
             <i class='bx bx-lock-alt'></i>
           </div>
+
           <div class = "input-box">
             <input type ="password" placeholder = "Confirm Password" required>
             </input>
             <i class='bx bx-lock'></i>
-
           </div>
 
           <div class= "remember-forgot">
