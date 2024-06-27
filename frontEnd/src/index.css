@@ -29,13 +29,17 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: url("pexels-felixmittermeier-957061.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+
 }
 
 .wrapper{
   border-radius: 20px;
   height: 450px;
   width: 420px;
-  background : black;
+  background : transparent;
   color: white;
 }
 
@@ -52,12 +56,19 @@ body {
   background: transparent;
   border: none;
   outline: none;
-  border: 2px solid hsl(300, 4%, 66%);
+  border: 2px solid hsl(0, 0%, 100%);
   border-radius: 20px; 
+  color: white;
+  
 }
+
 
 .input-box i {
   position: absolute;
+  top: 40%;
+  transform: translate(1000%);
+  color: white;
+  
 
 }
 
